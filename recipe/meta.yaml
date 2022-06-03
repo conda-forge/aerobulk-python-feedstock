@@ -1,5 +1,5 @@
 {% set name = "aerobulk-python" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
 
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ecb240f6640af0683ef23fbff5841ffc48869711e9f4532be04c0411fb40b4f0
+  sha256: f7275a6a7df518d9333e6e88aa0f0e33da1b71a403e0a3b7614864b300d935b5
 
 
 build:
