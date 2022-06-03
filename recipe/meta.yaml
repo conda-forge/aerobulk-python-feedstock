@@ -1,5 +1,5 @@
 {% set name = "aerobulk-python" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
 
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 85b3290d134b6487d847de14c1ec93abfd04c76610008358f0554e4419ce44c9
+  sha256: ecb240f6640af0683ef23fbff5841ffc48869711e9f4532be04c0411fb40b4f0
 
 
 build:
@@ -36,6 +36,7 @@ test:
     - pip
   commands:
     - pip check
+    - python -c "import aerobulk; assert aerobulk.__version__ == '{{ version }}', aerobulk.__version__"
 
 about:
   home: https://github.com/xgcm/aerobulk-python
