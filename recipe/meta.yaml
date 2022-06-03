@@ -1,5 +1,5 @@
 {% set name = "aerobulk-python" %}
-{% set version = "0.1.3" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 source:
 
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 194ee8eb8c0804b10669c1ff55ec5bd88ad258fb9b663516d79c10c4635c9d43
+  sha256: 85b3290d134b6487d847de14c1ec93abfd04c76610008358f0554e4419ce44c9
 
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36 or win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -39,7 +39,7 @@ test:
 
 about:
   home: https://github.com/xgcm/aerobulk-python
-  summary: 'A python wrapper for the aerobulk air-sea flux fortran code'
+  summary: A python wrapper for the aerobulk air-sea flux fortran code
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE
