@@ -22,11 +22,11 @@ requirements:
     - {{ compiler('m2w64_fortran') }}  # [win]
   host:
     - setuptools-scm
-    - python >= 3.8
+    - python >=3.8
     - pip
     - numpy
   run:
-    - python >= 3.8
+    - python >=3.8
     - {{ pin_compatible('numpy') }}
 
 test:
