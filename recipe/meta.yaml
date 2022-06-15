@@ -26,6 +26,7 @@ requirements:
     - pip
     - numpy
   run:
+    - xarray
     - python
     - {{ pin_compatible('numpy') }}
 
