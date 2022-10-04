@@ -1,6 +1,6 @@
 {% set name = "aerobulk-python" %}
-{% set version = "0.3.0" %}
-{% set hash = "c1bf09b472d33b798de7ce5409876de11895dd8c92c231f1931f703d19b388fa" %}
+{% set version = "0.4.0rc0" %}
+{% set hash = "029be321ee1c52b6a7d431f58e680cab971f2b7c4f8d7bb8c8aedbe61c95a92c" %}
 
 package:
   name: {{ name|lower }}
