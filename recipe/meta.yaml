@@ -24,12 +24,12 @@ requirements:
     - {{ compiler('m2w64_fortran') }}  # [win]
   host:
     - setuptools-scm
-    - python
+    - python<3.12
     - pip
     - numpy
   run:
     - xarray
-    - python
+    - python<3.12
     - {{ pin_compatible('numpy') }}
 
 test:
