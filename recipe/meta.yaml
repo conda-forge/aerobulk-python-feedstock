@@ -1,6 +1,6 @@
 {% set name = "aerobulk-python" %}
-{% set version = "0.4.0rc0" %}
-{% set hash = "029be321ee1c52b6a7d431f58e680cab971f2b7c4f8d7bb8c8aedbe61c95a92c" %}
+{% set version = "0.4.0" %}
+{% set hash = "91d794d8d457ffd48e270dce46a5c642a378343d0db0d8558cd6dc546431ff9b" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<38 or win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -24,12 +24,12 @@ requirements:
     - {{ compiler('m2w64_fortran') }}  # [win]
   host:
     - setuptools-scm
-    - python <3.12
+    - python
     - pip
     - numpy
   run:
     - xarray
-    - python <3.12
+    - python
     - {{ pin_compatible('numpy') }}
 
 test:
