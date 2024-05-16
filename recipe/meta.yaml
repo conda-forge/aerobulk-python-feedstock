@@ -1,6 +1,6 @@
 {% set name = "aerobulk-python" %}
-{% set version = "0.4.0" %}
-{% set hash = "91d794d8d457ffd48e270dce46a5c642a378343d0db0d8558cd6dc546431ff9b" %}
+{% set version = "0.4.2" %}
+{% set hash = "5f89065a6dce7dff3d3f4213d10ae98185e04e3a7c74b1654e90a43e383cc31c" %}
 
 package:
   name: {{ name|lower }}
@@ -22,6 +22,7 @@ requirements:
   build:
     - {{ compiler('fortran') }}  # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ stdlib("c") }}    # [win]
   host:
     - setuptools-scm
     - python
