@@ -14,7 +14,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<38 or win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,6 +22,7 @@ requirements:
   build:
     - {{ compiler('fortran') }}  # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ stdlib("c") }}    # [win]
   host:
     - setuptools-scm
     - python
